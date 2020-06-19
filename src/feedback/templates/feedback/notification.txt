@@ -1,0 +1,9 @@
+Привет! Поступило новое сообщение:
+От кого: {{instance.name}} ({{instance.email}})
+Тема: {{instance.subject|safe}}
+{% if instance.text %}
+Текст сообщения:
+{{instance.text|safe}}
+{% endif %}
+------------------------
+alisavolkova.com

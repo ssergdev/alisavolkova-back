@@ -1,0 +1,14 @@
+*.pyc
+*~
+__pycache__
+__pycache__/
+*.py[cod]
+.dockerignore
+.git
+.gitignore
+.venv
+README.md
+LICENSE
+.vscode
+todo.txt
+publish.sh

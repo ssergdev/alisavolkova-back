@@ -1,0 +1,12 @@
+{% extends "admin/base_site.html" %}
+{% block extrahead %}
+    <style>
+        .change-form .field-image_thumbnail,
+        #result_list .field-image_thumbnail{
+            width: 80px;
+        }
+        .change-form .dynamic-photos .original > p:first-child {
+            display: none;
+        }
+    </style>
+{% endblock %}

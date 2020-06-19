@@ -1,0 +1,73 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-16 10:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: gallery/apps.py:7
+msgid "Gallery"
+msgstr "Галерея"
+
+#: gallery/models.py:9 gallery/models.py:26
+msgid "Name"
+msgstr "Название"
+
+#: gallery/models.py:10 gallery/models.py:27
+msgid "Description"
+msgstr "Описание"
+
+#: gallery/models.py:12 gallery/models.py:33
+msgid "Slug"
+msgstr ""
+
+#: gallery/models.py:13 gallery/models.py:35
+msgid "Ordering"
+msgstr "Сортировка"
+
+#: gallery/models.py:20
+msgid "Tag"
+msgstr "Тэг"
+
+#: gallery/models.py:21 gallery/models.py:32
+msgid "Tags"
+msgstr "Тэги"
+
+#: gallery/models.py:28
+msgid "Text"
+msgstr "Текст"
+
+#: gallery/models.py:29
+msgid "History"
+msgstr "История"
+
+#: gallery/models.py:31
+msgid "Image"
+msgstr "Изображение"
+
+#: gallery/models.py:34
+msgid "Active"
+msgstr "Активность"
+
+#: gallery/models.py:58
+msgid "Artwork"
+msgstr "Картина"
+
+#: gallery/models.py:59
+msgid "Artworks"
+msgstr "Картины"
