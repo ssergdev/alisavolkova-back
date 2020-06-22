@@ -28,8 +28,9 @@ class TagAdmin(SortableAdminMixin, TranslatableAdmin):
 class ProductAdmin(SortableAdminMixin, TranslatableAdmin):
     search_fields = ['translations__name']
     list_display = ['image_thumbnail', 'name',
-                    'created', 'modified', 'ordering']
+                    'created', 'modified', 'active', 'ordering']
     list_display_links = ['image_thumbnail', 'name']
+    list_editable = ['active']
     list_fllter = [
         ('tags', SortedRelatedFieldListFilter),
         ('active')

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-16 10:23+0000\n"
+"POT-Creation-Date: 2020-06-22 11:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,26 +24,26 @@ msgstr ""
 msgid "Sorry, you can't change the type of existing block"
 msgstr "Извини, но ты не можешь изменить тип существующего блока"
 
-#: blocks/apps.py:7 blocks/models.py:50
+#: blocks/apps.py:7 blocks/models.py:44
 msgid "Fragments"
 msgstr "Фрагменты"
 
-#: blocks/models.py:10
+#: blocks/models.py:13
 msgid "Type"
 msgstr "Тип"
 
-#: blocks/models.py:12 blocks/models.py:21
+#: blocks/models.py:15 blocks/models.py:25
 msgid "Text"
 msgstr "Текст"
 
-#: blocks/models.py:13
+#: blocks/models.py:16
 msgid "Image"
 msgstr "Изображение"
 
-#: blocks/models.py:18
+#: blocks/models.py:21
 msgid "Slug"
 msgstr ""
 
-#: blocks/models.py:49
+#: blocks/models.py:43
 msgid "Fragment"
 msgstr "Фрагмент"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-16 10:23+0000\n"
+"POT-Creation-Date: 2020-06-22 11:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,26 +24,26 @@ msgstr ""
 msgid "Hero"
 msgstr "Постер"
 
-#: hero/models.py:8
+#: hero/models.py:10
 msgid "Image"
 msgstr "Изображение"
 
-#: hero/models.py:10
+#: hero/models.py:12
 msgid "Text"
 msgstr "Текст"
 
-#: hero/models.py:12
+#: hero/models.py:14
 msgid "Active"
 msgstr "Активность"
 
-#: hero/models.py:14
+#: hero/models.py:16
 msgid "Ordering"
 msgstr "Сортировка"
 
-#: hero/models.py:32
+#: hero/models.py:35
 msgid "Slide"
 msgstr "Слайд"
 
-#: hero/models.py:33
+#: hero/models.py:36
 msgid "Slides"
 msgstr "Слайды"

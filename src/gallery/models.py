@@ -42,6 +42,7 @@ class Artwork(TimeStampedModel, TranslatableModel):
     image = ThumbnailerField(_('Image'), upload_to='gallery')
     tags = models.ManyToManyField(Tag, verbose_name=_('Tags'), blank=True)
     slug = models.SlugField(_("Slug"), max_length=255, unique=True)
+    promote = models.BooleanField(_("Promote"), default=False)
     active = models.BooleanField(_("Active"), default=True)
     ordering = models.PositiveIntegerField(
         _("Ordering"), default=0, blank=False, null=False)

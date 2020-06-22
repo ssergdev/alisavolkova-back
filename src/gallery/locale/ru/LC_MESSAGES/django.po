@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-16 10:23+0000\n"
+"POT-Creation-Date: 2020-06-22 11:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,50 +24,54 @@ msgstr ""
 msgid "Gallery"
 msgstr "Галерея"
 
-#: gallery/models.py:9 gallery/models.py:26
+#: gallery/models.py:14 gallery/models.py:37
 msgid "Name"
 msgstr "Название"
 
-#: gallery/models.py:10 gallery/models.py:27
+#: gallery/models.py:15 gallery/models.py:38
 msgid "Description"
 msgstr "Описание"
 
-#: gallery/models.py:12 gallery/models.py:33
+#: gallery/models.py:17 gallery/models.py:44
 msgid "Slug"
 msgstr ""
 
-#: gallery/models.py:13 gallery/models.py:35
+#: gallery/models.py:19 gallery/models.py:48
 msgid "Ordering"
 msgstr "Сортировка"
 
-#: gallery/models.py:20
+#: gallery/models.py:26
 msgid "Tag"
 msgstr "Тэг"
 
-#: gallery/models.py:21 gallery/models.py:32
+#: gallery/models.py:27 gallery/models.py:43
 msgid "Tags"
 msgstr "Тэги"
 
-#: gallery/models.py:28
+#: gallery/models.py:39
 msgid "Text"
 msgstr "Текст"
 
-#: gallery/models.py:29
+#: gallery/models.py:40
 msgid "History"
 msgstr "История"
 
-#: gallery/models.py:31
+#: gallery/models.py:42
 msgid "Image"
 msgstr "Изображение"
 
-#: gallery/models.py:34
+#: gallery/models.py:45
+msgid "Promote"
+msgstr "На главной"
+
+#: gallery/models.py:46
 msgid "Active"
 msgstr "Активность"
 
-#: gallery/models.py:58
+#: gallery/models.py:71
 msgid "Artwork"
 msgstr "Картина"
 
-#: gallery/models.py:59
+#: gallery/models.py:72
 msgid "Artworks"
 msgstr "Картины"

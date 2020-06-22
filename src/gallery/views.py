@@ -1,5 +1,5 @@
 from rest_framework import viewsets
-from rest_framework.filters import SearchFilter
+from rest_framework.filters import SearchFilter, OrderingFilter
 from django_filters.rest_framework import DjangoFilterBackend
 from core.mixins import PaginationViewMixin, MultipleSerializersMixin
 from .models import Artwork, Tag
@@ -16,6 +16,7 @@ class ArtworkViewSet(PaginationViewMixin, MultipleSerializersMixin, viewsets.Rea
     serializer_class = ArtworkSerializer
     retrieve_serializer_class = ArtworkDetailSerializer
     lookup_field = 'slug'
-    filter_backends = [DjangoFilterBackend, SearchFilter]
+    filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
     filterset_fields = ['tags__slug']
+    ordering_fields = ['promote', 'ordering', 'created']
     search_fields = ['translations__name', 'translations__description', 'tags__translations__name']

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-16 10:23+0000\n"
+"POT-Creation-Date: 2020-06-22 11:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,50 +24,50 @@ msgstr ""
 msgid "Studying"
 msgstr "Обучение"
 
-#: workshops/models.py:10
+#: workshops/models.py:17
 msgid "Name"
 msgstr "Название"
 
-#: workshops/models.py:11
+#: workshops/models.py:18
 msgid "Description"
 msgstr "Описание"
 
-#: workshops/models.py:12
+#: workshops/models.py:19
 msgid "Text"
 msgstr "Текст"
 
-#: workshops/models.py:13
+#: workshops/models.py:20
 msgid "Place"
 msgstr "Место"
 
-#: workshops/models.py:15
+#: workshops/models.py:22
 msgid "Image"
 msgstr "Изображение"
 
-#: workshops/models.py:16
+#: workshops/models.py:23
 msgid "Date start"
 msgstr "Дата начала"
 
-#: workshops/models.py:17
+#: workshops/models.py:24
 msgid "Date end"
 msgstr "Дата конца"
 
-#: workshops/models.py:18
+#: workshops/models.py:25
 msgid "Active"
 msgstr "Активность"
 
-#: workshops/models.py:19
+#: workshops/models.py:26
 msgid "Slug"
 msgstr ""
 
-#: workshops/models.py:21
+#: workshops/models.py:28
 msgid "Ordering"
 msgstr "Сортировка"
 
-#: workshops/models.py:38
+#: workshops/models.py:46
 msgid "Workshop"
 msgstr "Курс"
 
-#: workshops/models.py:39
+#: workshops/models.py:47
 msgid "Workshops"
 msgstr "Курсы"

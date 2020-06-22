@@ -19,6 +19,7 @@ class WorkshopAdmin(TranslatableAdmin):
     list_display = ['image_thumbnail', 'name',
                     'date_start', 'date_end', 'active']
     list_display_links = ['image_thumbnail', 'name']
+    list_editable = ['active']
     fields = ['image', 'name', 'description', 'place',
               'date_start', 'date_end', 'text', 'slug', 'active']
     inlines = [PhotoInline]

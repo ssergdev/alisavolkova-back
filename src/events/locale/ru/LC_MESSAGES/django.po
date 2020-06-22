@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-16 10:23+0000\n"
+"POT-Creation-Date: 2020-06-22 11:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,54 +20,54 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: events/apps.py:7 events/models.py:42
+#: events/apps.py:7 events/models.py:49
 msgid "Events"
 msgstr "События"
 
-#: events/models.py:11
+#: events/models.py:17
 msgid "Name"
 msgstr "Заголовок"
 
-#: events/models.py:12
+#: events/models.py:18
 msgid "Description"
 msgstr "Описание"
 
-#: events/models.py:13
+#: events/models.py:19
 msgid "Text"
 msgstr "Текст"
 
-#: events/models.py:14
+#: events/models.py:20
 msgid "Place"
 msgstr "Место"
 
-#: events/models.py:16
+#: events/models.py:22
 msgid "Image"
 msgstr "Изображение"
 
-#: events/models.py:17
+#: events/models.py:23
 msgid "Date start"
 msgstr "Дата начала"
 
-#: events/models.py:18
+#: events/models.py:24
 msgid "Date end"
 msgstr "Дата конца"
 
-#: events/models.py:20
+#: events/models.py:26
 msgid "Artworks"
 msgstr "Картины"
 
-#: events/models.py:21
+#: events/models.py:27
 msgid "Active"
 msgstr "Активный"
 
-#: events/models.py:22
+#: events/models.py:28
 msgid "Slug"
 msgstr ""
 
-#: events/models.py:24
+#: events/models.py:30
 msgid "Ordering"
 msgstr "Сортировка"
 
-#: events/models.py:41
+#: events/models.py:48
 msgid "Event"
 msgstr "Событие"
