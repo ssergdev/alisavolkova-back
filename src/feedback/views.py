@@ -8,3 +8,4 @@ class MessageCreateView(CreateAPIView):
     authentication_classes = ()
     queryset = Message.objects.all()
     serializer_class = MessageSerializer
+    authentication_classes = []
