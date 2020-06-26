@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'workshops',
     'merch',
     'feedback',
-    'django_cleanup.apps.CleanupConfig'# it should be the last item!
+    'django_cleanup.apps.CleanupConfig'  # it should be the last item!
 ]
 
 MIDDLEWARE = [
@@ -86,11 +86,11 @@ WSGI_APPLICATION = 'app.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': env('DB_NAME', default='postgres'),
-        'USER': env('DB_USER', default='postgres'),
-        'PASSWORD': env('DB_PASSWORD', default=''),
-        'HOST': env('DB_HOST', default='postgres'),
-        'PORT': env('DB_PORT', default='5432'),
+        'NAME': env('DB_NAME'),
+        'USER': env('DB_USER'),
+        'PASSWORD': env('DB_PASSWORD'),
+        'HOST': env('DB_HOST'),
+        'PORT': env('DB_PORT'),
     },
 }
 
@@ -192,21 +192,23 @@ CKEDITOR_IMAGE_QUALITY = 85
 
 CKEDITOR_CONFIGS = {
     "default": {
+        "toolbar": "full",
         "toolbar": [
             ['Styles', 'Format', 'Bold', 'Italic', 'Underline',
                 'Strike', 'SpellChecker', 'Undo', 'Redo'],
             ['Link', 'Unlink'],
-            ['Image', 'Embed', 'Table', 'HorizontalRule'],
+            ['Image', 'Html5video', 'Embed', 'Table', 'HorizontalRule'],
             ['TextColor', 'BGColor'],
             ['Source', 'Maximize']
         ],
-        "extraPlugins": ",".join(["image2", "embed", "autoembed" ]),
+        "extraPlugins": ",".join(["image2", "embed", "autoembed", "html5video", "widget", "widgetselection", "clipboard", "lineutils"]),
         "removePlugins": ",".join(["image", "stylesheetparser"]),
         "contentsCss": "/static/admin/css/ckeditor_custom.css",
         'height': 291,
         'width': 835,
         'filebrowserWindowWidth': 940,
         'filebrowserWindowHeight': 725,
+        'allowedContent': True
     }
 
 }
