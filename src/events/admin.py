@@ -16,7 +16,8 @@ class PhotoInline(SortableInlineAdminMixin, admin.TabularInline):
 @thumbnail('image')
 class EventAdmin(SortableAdminMixin, TranslatableAdmin):
     search_fields = ['translations__name', 'translations__place']
-    list_display = ['image_thumbnail', 'name', 'date_start', 'date_end', 'active', 'ordering']
+    list_display = ['image_thumbnail', 'name',
+                    'date_start', 'date_end', 'active', 'ordering']
     list_display_links = ['image_thumbnail', 'name']
     list_editable = ['active']
     list_filter = ['date_start', 'date_end', 'active']

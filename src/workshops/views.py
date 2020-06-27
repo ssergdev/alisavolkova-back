@@ -9,4 +9,3 @@ class WorkshopViewSet(MultipleSerializersMixin, PaginationViewMixin, viewsets.Re
     lookup_field = 'slug'
     serializer_class = WorkshopSerializer
     retrieve_serializer_class = WorkshopDetailSerializer
-

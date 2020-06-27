@@ -14,8 +14,10 @@ class BlockAdminForm(TranslatableModelForm):
     def clean_type(self):
         type = self.cleaned_data['type']
         if self.instance.pk and self.instance.type != type:
-            raise forms.ValidationError(_("Sorry, you can't change the type of existing block"))
+            raise forms.ValidationError(
+                _("Sorry, you can't change the type of existing block"))
         return type
+
 
 class BlockAdmin(TranslatableAdmin):
     list_display = ['slug', 'type', 'created', 'modified']

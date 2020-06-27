@@ -15,7 +15,6 @@ class Slide(TimeStampedModel, TranslatableModel):
     ordering = models.PositiveIntegerField(
         _("Ordering"), default=0, blank=False, null=False)
 
-
     def save(self, *args, **kwargs):
         """
         To avoid the thumbnail creations on user request,

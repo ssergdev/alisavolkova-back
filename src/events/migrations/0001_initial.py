@@ -19,16 +19,20 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Event',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(auto_created=True,
+                                        primary_key=True, serialize=False, verbose_name='ID')),
                 ('created', models.DateTimeField(auto_now_add=True)),
                 ('modified', models.DateTimeField(auto_now=True)),
                 ('image', models.ImageField(upload_to='events')),
                 ('date_start', models.DateField(verbose_name='Date start')),
                 ('date_end', models.DateField(blank=True, verbose_name='Date end')),
                 ('active', models.BooleanField(default=True, verbose_name='Active')),
-                ('slug', models.SlugField(max_length=255, unique=True, verbose_name='Slug')),
-                ('ordering', models.PositiveIntegerField(default=0, verbose_name='Ordering')),
-                ('artworks', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='gallery.Artwork')),
+                ('slug', models.SlugField(max_length=255,
+                                          unique=True, verbose_name='Slug')),
+                ('ordering', models.PositiveIntegerField(
+                    default=0, verbose_name='Ordering')),
+                ('artworks', models.ForeignKey(blank=True, null=True,
+                                               on_delete=django.db.models.deletion.SET_NULL, to='gallery.Artwork')),
             ],
             options={
                 'ordering': ['ordering'],
@@ -38,12 +42,15 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Photo',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(auto_created=True,
+                                        primary_key=True, serialize=False, verbose_name='ID')),
                 ('created', models.DateTimeField(auto_now_add=True)),
                 ('modified', models.DateTimeField(auto_now=True)),
                 ('image', models.ImageField(upload_to='related')),
-                ('ordering', models.PositiveIntegerField(default=0, verbose_name='Ordering')),
-                ('target', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='photos', to='events.Event')),
+                ('ordering', models.PositiveIntegerField(
+                    default=0, verbose_name='Ordering')),
+                ('target', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE,
+                                             related_name='photos', to='events.Event')),
             ],
             options={
                 'ordering': ['ordering', '-created'],
@@ -53,13 +60,16 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='EventTranslation',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('language_code', models.CharField(db_index=True, max_length=15, verbose_name='Language')),
+                ('id', models.AutoField(auto_created=True,
+                                        primary_key=True, serialize=False, verbose_name='ID')),
+                ('language_code', models.CharField(
+                    db_index=True, max_length=15, verbose_name='Language')),
                 ('name', models.CharField(max_length=255, verbose_name='Name')),
                 ('description', models.TextField(verbose_name='Description')),
                 ('text', ckeditor.fields.RichTextField(verbose_name='Text')),
                 ('place', models.CharField(max_length=255, verbose_name='Place')),
-                ('master', parler.fields.TranslationsForeignKey(editable=False, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='translations', to='events.Event')),
+                ('master', parler.fields.TranslationsForeignKey(editable=False, null=True,
+                                                                on_delete=django.db.models.deletion.CASCADE, related_name='translations', to='events.Event')),
             ],
             options={
                 'verbose_name': 'event Translation',

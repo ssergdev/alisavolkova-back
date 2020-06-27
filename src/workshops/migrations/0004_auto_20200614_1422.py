@@ -12,20 +12,24 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AlterModelOptions(
             name='photo',
-            options={'ordering': ['ordering', '-created'], 'verbose_name': 'Photo', 'verbose_name_plural': 'Photos'},
+            options={'ordering': ['ordering', '-created'],
+                     'verbose_name': 'Photo', 'verbose_name_plural': 'Photos'},
         ),
         migrations.AlterModelOptions(
             name='workshop',
-            options={'ordering': ['-created'], 'verbose_name': 'Workshop', 'verbose_name_plural': 'Workshops'},
+            options={'ordering': [
+                '-created'], 'verbose_name': 'Workshop', 'verbose_name_plural': 'Workshops'},
         ),
         migrations.AlterModelOptions(
             name='workshoptranslation',
-            options={'default_permissions': (), 'managed': True, 'verbose_name': 'Workshop Translation'},
+            options={'default_permissions': (), 'managed': True,
+                     'verbose_name': 'Workshop Translation'},
         ),
         migrations.AlterField(
             model_name='photo',
             name='created',
-            field=models.DateTimeField(auto_now_add=True, verbose_name='Created'),
+            field=models.DateTimeField(
+                auto_now_add=True, verbose_name='Created'),
         ),
         migrations.AlterField(
             model_name='photo',
@@ -40,12 +44,14 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='workshop',
             name='created',
-            field=models.DateTimeField(auto_now_add=True, verbose_name='Created'),
+            field=models.DateTimeField(
+                auto_now_add=True, verbose_name='Created'),
         ),
         migrations.AlterField(
             model_name='workshop',
             name='image',
-            field=models.ImageField(upload_to='workshops', verbose_name='Image'),
+            field=models.ImageField(
+                upload_to='workshops', verbose_name='Image'),
         ),
         migrations.AlterField(
             model_name='workshop',

@@ -19,4 +19,5 @@ class ArtworkViewSet(PaginationViewMixin, MultipleSerializersMixin, viewsets.Rea
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
     filterset_fields = ['tags__slug']
     ordering_fields = ['promote', 'ordering', 'created']
-    search_fields = ['translations__name', 'translations__description', 'tags__translations__name']
+    search_fields = ['translations__name',
+                     'translations__description', 'tags__translations__name']

@@ -8,7 +8,7 @@ class BlockSerializer(ExtraFieldsSerializerMixin, serializers.ModelSerializer):
     image = serializers.SerializerMethodField()
 
     class Meta:
-        model = Block 
+        model = Block
         fields = '__all__'
         extra_fields = ['text']
 

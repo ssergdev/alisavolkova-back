@@ -12,28 +12,34 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AlterModelOptions(
             name='artwork',
-            options={'ordering': ['ordering'], 'verbose_name': 'Artwork', 'verbose_name_plural': 'Artworks'},
+            options={'ordering': [
+                'ordering'], 'verbose_name': 'Artwork', 'verbose_name_plural': 'Artworks'},
         ),
         migrations.AlterModelOptions(
             name='artworktranslation',
-            options={'default_permissions': (), 'managed': True, 'verbose_name': 'Artwork Translation'},
+            options={'default_permissions': (), 'managed': True,
+                     'verbose_name': 'Artwork Translation'},
         ),
         migrations.AlterModelOptions(
             name='photo',
-            options={'ordering': ['ordering', '-created'], 'verbose_name': 'Photo', 'verbose_name_plural': 'Photos'},
+            options={'ordering': ['ordering', '-created'],
+                     'verbose_name': 'Photo', 'verbose_name_plural': 'Photos'},
         ),
         migrations.AlterModelOptions(
             name='tag',
-            options={'ordering': ['ordering'], 'verbose_name': 'Tag', 'verbose_name_plural': 'Tags'},
+            options={'ordering': [
+                'ordering'], 'verbose_name': 'Tag', 'verbose_name_plural': 'Tags'},
         ),
         migrations.AlterModelOptions(
             name='tagtranslation',
-            options={'default_permissions': (), 'managed': True, 'verbose_name': 'Tag Translation'},
+            options={'default_permissions': (), 'managed': True,
+                     'verbose_name': 'Tag Translation'},
         ),
         migrations.AlterField(
             model_name='artwork',
             name='created',
-            field=models.DateTimeField(auto_now_add=True, verbose_name='Created'),
+            field=models.DateTimeField(
+                auto_now_add=True, verbose_name='Created'),
         ),
         migrations.AlterField(
             model_name='artwork',
@@ -48,12 +54,14 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='artwork',
             name='tags',
-            field=models.ManyToManyField(blank=True, to='gallery.Tag', verbose_name='Tags'),
+            field=models.ManyToManyField(
+                blank=True, to='gallery.Tag', verbose_name='Tags'),
         ),
         migrations.AlterField(
             model_name='photo',
             name='created',
-            field=models.DateTimeField(auto_now_add=True, verbose_name='Created'),
+            field=models.DateTimeField(
+                auto_now_add=True, verbose_name='Created'),
         ),
         migrations.AlterField(
             model_name='photo',
@@ -68,7 +76,8 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='tag',
             name='created',
-            field=models.DateTimeField(auto_now_add=True, verbose_name='Created'),
+            field=models.DateTimeField(
+                auto_now_add=True, verbose_name='Created'),
         ),
         migrations.AlterField(
             model_name='tag',

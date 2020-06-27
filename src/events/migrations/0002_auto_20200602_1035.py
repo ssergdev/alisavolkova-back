@@ -18,6 +18,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='event',
             name='artworks',
-            field=models.ManyToManyField(blank=True, null=True, to='gallery.Artwork'),
+            field=models.ManyToManyField(
+                blank=True, null=True, to='gallery.Artwork'),
         ),
     ]

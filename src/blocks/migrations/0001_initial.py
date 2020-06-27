@@ -18,11 +18,14 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Block',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(auto_created=True,
+                                        primary_key=True, serialize=False, verbose_name='ID')),
                 ('created', models.DateTimeField(auto_now_add=True)),
                 ('modified', models.DateTimeField(auto_now=True)),
-                ('type', models.CharField(choices=[('text', 'Text'), ('image', 'Image')], default='text', max_length=16, verbose_name='Type')),
-                ('slug', models.SlugField(max_length=255, unique=True, verbose_name='Slug')),
+                ('type', models.CharField(choices=[
+                 ('text', 'Text'), ('image', 'Image')], default='text', max_length=16, verbose_name='Type')),
+                ('slug', models.SlugField(max_length=255,
+                                          unique=True, verbose_name='Slug')),
                 ('image', models.ImageField(upload_to='blocks')),
             ],
             options={
@@ -33,10 +36,14 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='BlockTranslation',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('language_code', models.CharField(db_index=True, max_length=15, verbose_name='Language')),
-                ('text', ckeditor.fields.RichTextField(blank=True, verbose_name='Text')),
-                ('master', parler.fields.TranslationsForeignKey(editable=False, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='translations', to='blocks.Block')),
+                ('id', models.AutoField(auto_created=True,
+                                        primary_key=True, serialize=False, verbose_name='ID')),
+                ('language_code', models.CharField(
+                    db_index=True, max_length=15, verbose_name='Language')),
+                ('text', ckeditor.fields.RichTextField(
+                    blank=True, verbose_name='Text')),
+                ('master', parler.fields.TranslationsForeignKey(editable=False, null=True,
+                                                                on_delete=django.db.models.deletion.CASCADE, related_name='translations', to='blocks.Block')),
             ],
             options={
                 'verbose_name': 'block Translation',

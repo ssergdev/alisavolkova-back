@@ -17,13 +17,16 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Artwork',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(auto_created=True,
+                                        primary_key=True, serialize=False, verbose_name='ID')),
                 ('created', models.DateTimeField(auto_now_add=True)),
                 ('modified', models.DateTimeField(auto_now=True)),
                 ('image', models.ImageField(upload_to='gallery')),
-                ('slug', models.SlugField(max_length=255, unique=True, verbose_name='Slug')),
+                ('slug', models.SlugField(max_length=255,
+                                          unique=True, verbose_name='Slug')),
                 ('active', models.BooleanField(default=True, verbose_name='Active')),
-                ('ordering', models.PositiveIntegerField(default=0, verbose_name='Ordering')),
+                ('ordering', models.PositiveIntegerField(
+                    default=0, verbose_name='Ordering')),
             ],
             options={
                 'ordering': ['ordering'],
@@ -33,11 +36,13 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Photo',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(auto_created=True,
+                                        primary_key=True, serialize=False, verbose_name='ID')),
                 ('created', models.DateTimeField(auto_now_add=True)),
                 ('modified', models.DateTimeField(auto_now=True)),
                 ('image', models.ImageField(upload_to='gallery')),
-                ('artwork', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='photos', to='gallery.Artwork')),
+                ('artwork', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE,
+                                              related_name='photos', to='gallery.Artwork')),
             ],
             options={
                 'ordering': ['-created'],
@@ -47,11 +52,14 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Tag',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(auto_created=True,
+                                        primary_key=True, serialize=False, verbose_name='ID')),
                 ('created', models.DateTimeField(auto_now_add=True)),
                 ('modified', models.DateTimeField(auto_now=True)),
-                ('slug', models.SlugField(max_length=255, unique=True, verbose_name='Slug')),
-                ('ordering', models.PositiveIntegerField(default=0, verbose_name='Ordering')),
+                ('slug', models.SlugField(max_length=255,
+                                          unique=True, verbose_name='Slug')),
+                ('ordering', models.PositiveIntegerField(
+                    default=0, verbose_name='Ordering')),
             ],
             options={
                 'ordering': ['ordering'],
@@ -66,11 +74,15 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='TagTranslation',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('language_code', models.CharField(db_index=True, max_length=15, verbose_name='Language')),
+                ('id', models.AutoField(auto_created=True,
+                                        primary_key=True, serialize=False, verbose_name='ID')),
+                ('language_code', models.CharField(
+                    db_index=True, max_length=15, verbose_name='Language')),
                 ('name', models.CharField(max_length=255, verbose_name='Name')),
-                ('description', models.TextField(blank=True, verbose_name='Description')),
-                ('master', parler.fields.TranslationsForeignKey(editable=False, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='translations', to='gallery.Tag')),
+                ('description', models.TextField(
+                    blank=True, verbose_name='Description')),
+                ('master', parler.fields.TranslationsForeignKey(editable=False, null=True,
+                                                                on_delete=django.db.models.deletion.CASCADE, related_name='translations', to='gallery.Tag')),
             ],
             options={
                 'verbose_name': 'tag Translation',
@@ -85,10 +97,14 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='PhotoTranslation',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('language_code', models.CharField(db_index=True, max_length=15, verbose_name='Language')),
-                ('name', models.CharField(blank=True, max_length=255, verbose_name='Name')),
-                ('master', parler.fields.TranslationsForeignKey(editable=False, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='translations', to='gallery.Photo')),
+                ('id', models.AutoField(auto_created=True,
+                                        primary_key=True, serialize=False, verbose_name='ID')),
+                ('language_code', models.CharField(
+                    db_index=True, max_length=15, verbose_name='Language')),
+                ('name', models.CharField(blank=True,
+                                          max_length=255, verbose_name='Name')),
+                ('master', parler.fields.TranslationsForeignKey(editable=False, null=True,
+                                                                on_delete=django.db.models.deletion.CASCADE, related_name='translations', to='gallery.Photo')),
             ],
             options={
                 'verbose_name': 'photo Translation',
@@ -103,13 +119,16 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='ArtworkTranslation',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('language_code', models.CharField(db_index=True, max_length=15, verbose_name='Language')),
+                ('id', models.AutoField(auto_created=True,
+                                        primary_key=True, serialize=False, verbose_name='ID')),
+                ('language_code', models.CharField(
+                    db_index=True, max_length=15, verbose_name='Language')),
                 ('name', models.CharField(max_length=255, verbose_name='Name')),
                 ('description', models.TextField(verbose_name='Description')),
                 ('text', models.TextField(blank=True, verbose_name='Text')),
                 ('history', models.TextField(blank=True, verbose_name='History')),
-                ('master', parler.fields.TranslationsForeignKey(editable=False, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='translations', to='gallery.Artwork')),
+                ('master', parler.fields.TranslationsForeignKey(editable=False, null=True,
+                                                                on_delete=django.db.models.deletion.CASCADE, related_name='translations', to='gallery.Artwork')),
             ],
             options={
                 'verbose_name': 'artwork Translation',

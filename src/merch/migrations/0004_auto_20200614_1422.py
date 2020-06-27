@@ -13,28 +13,34 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AlterModelOptions(
             name='photo',
-            options={'ordering': ['ordering', '-created'], 'verbose_name': 'Photo', 'verbose_name_plural': 'Photos'},
+            options={'ordering': ['ordering', '-created'],
+                     'verbose_name': 'Photo', 'verbose_name_plural': 'Photos'},
         ),
         migrations.AlterModelOptions(
             name='product',
-            options={'ordering': ['ordering'], 'verbose_name': 'Product', 'verbose_name_plural': 'Products'},
+            options={'ordering': [
+                'ordering'], 'verbose_name': 'Product', 'verbose_name_plural': 'Products'},
         ),
         migrations.AlterModelOptions(
             name='producttranslation',
-            options={'default_permissions': (), 'managed': True, 'verbose_name': 'Product Translation'},
+            options={'default_permissions': (), 'managed': True,
+                     'verbose_name': 'Product Translation'},
         ),
         migrations.AlterModelOptions(
             name='tag',
-            options={'ordering': ['ordering'], 'verbose_name': 'Tag', 'verbose_name_plural': 'Tags'},
+            options={'ordering': [
+                'ordering'], 'verbose_name': 'Tag', 'verbose_name_plural': 'Tags'},
         ),
         migrations.AlterModelOptions(
             name='tagtranslation',
-            options={'default_permissions': (), 'managed': True, 'verbose_name': 'Tag Translation'},
+            options={'default_permissions': (), 'managed': True,
+                     'verbose_name': 'Tag Translation'},
         ),
         migrations.AlterField(
             model_name='photo',
             name='created',
-            field=models.DateTimeField(auto_now_add=True, verbose_name='Created'),
+            field=models.DateTimeField(
+                auto_now_add=True, verbose_name='Created'),
         ),
         migrations.AlterField(
             model_name='photo',
@@ -49,7 +55,8 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='product',
             name='created',
-            field=models.DateTimeField(auto_now_add=True, verbose_name='Created'),
+            field=models.DateTimeField(
+                auto_now_add=True, verbose_name='Created'),
         ),
         migrations.AlterField(
             model_name='product',
@@ -64,17 +71,20 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='product',
             name='price',
-            field=djmoney.models.fields.MoneyField(blank=True, decimal_places=2, default_currency='USD', max_digits=14, null=True, verbose_name='Price'),
+            field=djmoney.models.fields.MoneyField(
+                blank=True, decimal_places=2, default_currency='USD', max_digits=14, null=True, verbose_name='Price'),
         ),
         migrations.AlterField(
             model_name='product',
             name='tags',
-            field=models.ManyToManyField(blank=True, to='merch.Tag', verbose_name='Tags'),
+            field=models.ManyToManyField(
+                blank=True, to='merch.Tag', verbose_name='Tags'),
         ),
         migrations.AlterField(
             model_name='tag',
             name='created',
-            field=models.DateTimeField(auto_now_add=True, verbose_name='Created'),
+            field=models.DateTimeField(
+                auto_now_add=True, verbose_name='Created'),
         ),
         migrations.AlterField(
             model_name='tag',

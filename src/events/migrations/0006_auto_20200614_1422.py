@@ -13,25 +13,30 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AlterModelOptions(
             name='event',
-            options={'ordering': ['ordering'], 'verbose_name': 'Event', 'verbose_name_plural': 'Events'},
+            options={'ordering': [
+                'ordering'], 'verbose_name': 'Event', 'verbose_name_plural': 'Events'},
         ),
         migrations.AlterModelOptions(
             name='eventtranslation',
-            options={'default_permissions': (), 'managed': True, 'verbose_name': 'Event Translation'},
+            options={'default_permissions': (), 'managed': True,
+                     'verbose_name': 'Event Translation'},
         ),
         migrations.AlterModelOptions(
             name='photo',
-            options={'ordering': ['ordering', '-created'], 'verbose_name': 'Photo', 'verbose_name_plural': 'Photos'},
+            options={'ordering': ['ordering', '-created'],
+                     'verbose_name': 'Photo', 'verbose_name_plural': 'Photos'},
         ),
         migrations.AlterField(
             model_name='event',
             name='artworks',
-            field=models.ManyToManyField(blank=True, to='gallery.Artwork', verbose_name='Artworks'),
+            field=models.ManyToManyField(
+                blank=True, to='gallery.Artwork', verbose_name='Artworks'),
         ),
         migrations.AlterField(
             model_name='event',
             name='created',
-            field=models.DateTimeField(auto_now_add=True, verbose_name='Created'),
+            field=models.DateTimeField(
+                auto_now_add=True, verbose_name='Created'),
         ),
         migrations.AlterField(
             model_name='event',
@@ -46,7 +51,8 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='photo',
             name='created',
-            field=models.DateTimeField(auto_now_add=True, verbose_name='Created'),
+            field=models.DateTimeField(
+                auto_now_add=True, verbose_name='Created'),
         ),
         migrations.AlterField(
             model_name='photo',

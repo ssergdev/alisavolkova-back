@@ -17,12 +17,14 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Slide',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(auto_created=True,
+                                        primary_key=True, serialize=False, verbose_name='ID')),
                 ('created', models.DateTimeField(auto_now_add=True)),
                 ('modified', models.DateTimeField(auto_now=True)),
                 ('image', models.ImageField(blank=True, upload_to='blocks')),
                 ('active', models.BooleanField(default=True, verbose_name='Active')),
-                ('ordering', models.PositiveIntegerField(default=0, verbose_name='Ordering')),
+                ('ordering', models.PositiveIntegerField(
+                    default=0, verbose_name='Ordering')),
             ],
             options={
                 'ordering': ['ordering'],
@@ -32,10 +34,13 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='SlideTranslation',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('language_code', models.CharField(db_index=True, max_length=15, verbose_name='Language')),
+                ('id', models.AutoField(auto_created=True,
+                                        primary_key=True, serialize=False, verbose_name='ID')),
+                ('language_code', models.CharField(
+                    db_index=True, max_length=15, verbose_name='Language')),
                 ('text', models.TextField(blank=True, verbose_name='Text')),
-                ('master', parler.fields.TranslationsForeignKey(editable=False, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='translations', to='hero.Slide')),
+                ('master', parler.fields.TranslationsForeignKey(editable=False, null=True,
+                                                                on_delete=django.db.models.deletion.CASCADE, related_name='translations', to='hero.Slide')),
             ],
             options={
                 'verbose_name': 'slide Translation',

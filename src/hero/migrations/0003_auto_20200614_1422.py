@@ -13,7 +13,8 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='slide',
             name='created',
-            field=models.DateTimeField(auto_now_add=True, verbose_name='Created'),
+            field=models.DateTimeField(
+                auto_now_add=True, verbose_name='Created'),
         ),
         migrations.AlterField(
             model_name='slide',

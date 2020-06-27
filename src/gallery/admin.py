@@ -27,7 +27,8 @@ class TagAdmin(SortableAdminMixin, TranslatableAdmin):
 @thumbnail('image')
 class ArtworkAdmin(SortableAdminMixin, TranslatableAdmin):
     search_fields = ['translations__name']
-    list_display = ['image_thumbnail', 'name', 'created', 'modified', 'promote', 'active', 'ordering']
+    list_display = ['image_thumbnail', 'name', 'created',
+                    'modified', 'promote', 'active', 'ordering']
     list_display_links = ['image_thumbnail', 'name']
     list_editable = ['promote', 'active']
     list_filter = (

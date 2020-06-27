@@ -14,6 +14,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='slidetranslation',
             name='text',
-            field=ckeditor.fields.RichTextField(blank=True, verbose_name='Text'),
+            field=ckeditor.fields.RichTextField(
+                blank=True, verbose_name='Text'),
         ),
     ]

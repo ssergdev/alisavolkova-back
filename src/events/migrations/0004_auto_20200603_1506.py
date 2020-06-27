@@ -13,6 +13,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='event',
             name='date_end',
-            field=models.DateField(blank=True, null=True, verbose_name='Date end'),
+            field=models.DateField(blank=True, null=True,
+                                   verbose_name='Date end'),
         ),
     ]

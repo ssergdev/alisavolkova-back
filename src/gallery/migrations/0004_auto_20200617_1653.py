@@ -14,11 +14,13 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='artwork',
             name='image',
-            field=easy_thumbnails.fields.ThumbnailerField(upload_to='gallery', verbose_name='Image'),
+            field=easy_thumbnails.fields.ThumbnailerField(
+                upload_to='gallery', verbose_name='Image'),
         ),
         migrations.AlterField(
             model_name='photo',
             name='image',
-            field=easy_thumbnails.fields.ThumbnailerField(upload_to='related', verbose_name='Image'),
+            field=easy_thumbnails.fields.ThumbnailerField(
+                upload_to='related', verbose_name='Image'),
         ),
     ]

@@ -22,7 +22,8 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='photo',
             name='ordering',
-            field=models.PositiveIntegerField(default=0, verbose_name='Ordering'),
+            field=models.PositiveIntegerField(
+                default=0, verbose_name='Ordering'),
         ),
         migrations.AlterField(
             model_name='photo',

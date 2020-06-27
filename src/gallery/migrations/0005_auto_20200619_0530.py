@@ -14,11 +14,13 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='artworktranslation',
             name='history',
-            field=ckeditor.fields.RichTextField(blank=True, verbose_name='History'),
+            field=ckeditor.fields.RichTextField(
+                blank=True, verbose_name='History'),
         ),
         migrations.AlterField(
             model_name='artworktranslation',
             name='text',
-            field=ckeditor.fields.RichTextField(blank=True, verbose_name='Text'),
+            field=ckeditor.fields.RichTextField(
+                blank=True, verbose_name='Text'),
         ),
     ]

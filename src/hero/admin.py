@@ -7,7 +7,8 @@ from .models import Slide
 
 @thumbnail('image')
 class SlideAdmin(SortableAdminMixin, TranslatableAdmin):
-    list_display = ['image_thumbnail', 'created', 'modified', 'active', 'ordering']
+    list_display = ['image_thumbnail', 'created',
+                    'modified', 'active', 'ordering']
     list_filter = ['active']
     list_editable = ['active']
     fields = ['image', 'text', 'active']

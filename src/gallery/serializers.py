@@ -31,7 +31,7 @@ class ArtworkSerializer(ExtraFieldsSerializerMixin, serializers.ModelSerializer)
         model = Artwork
         fields = '__all__'
         extra_fields = ['name', 'description', 'text', 'history']
-    
+
     def get_image(self, obj):
         return responsiveImage(obj.image, (468, 768, 990, 1400))
 

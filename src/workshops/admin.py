@@ -1,6 +1,6 @@
 from django.contrib import admin
 from parler.admin import TranslatableAdmin
-from adminsortable2.admin import  SortableInlineAdminMixin
+from adminsortable2.admin import SortableInlineAdminMixin
 from core.admin.decorators import thumbnail
 from .models import Workshop, Photo
 
@@ -29,5 +29,6 @@ class WorkshopAdmin(TranslatableAdmin):
         return {
             'slug': ['name']
         }
+
 
 admin.site.register(Workshop, WorkshopAdmin)

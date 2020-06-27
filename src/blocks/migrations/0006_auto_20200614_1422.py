@@ -12,16 +12,19 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AlterModelOptions(
             name='block',
-            options={'verbose_name': 'Fragment', 'verbose_name_plural': 'Fragments'},
+            options={'verbose_name': 'Fragment',
+                     'verbose_name_plural': 'Fragments'},
         ),
         migrations.AlterModelOptions(
             name='blocktranslation',
-            options={'default_permissions': (), 'managed': True, 'verbose_name': 'Fragment Translation'},
+            options={'default_permissions': (), 'managed': True,
+                     'verbose_name': 'Fragment Translation'},
         ),
         migrations.AlterField(
             model_name='block',
             name='created',
-            field=models.DateTimeField(auto_now_add=True, verbose_name='Created'),
+            field=models.DateTimeField(
+                auto_now_add=True, verbose_name='Created'),
         ),
         migrations.AlterField(
             model_name='block',

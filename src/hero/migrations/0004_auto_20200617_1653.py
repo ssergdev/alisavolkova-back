@@ -14,6 +14,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='slide',
             name='image',
-            field=easy_thumbnails.fields.ThumbnailerField(blank=True, upload_to='blocks', verbose_name='Image'),
+            field=easy_thumbnails.fields.ThumbnailerField(
+                blank=True, upload_to='blocks', verbose_name='Image'),
         ),
     ]

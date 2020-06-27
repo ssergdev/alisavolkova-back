@@ -14,6 +14,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='blocktranslation',
             name='text',
-            field=ckeditor_uploader.fields.RichTextUploadingField(blank=True, verbose_name='Text'),
+            field=ckeditor_uploader.fields.RichTextUploadingField(
+                blank=True, verbose_name='Text'),
         ),
     ]

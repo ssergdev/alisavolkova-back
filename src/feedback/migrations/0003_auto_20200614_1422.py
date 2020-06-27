@@ -12,12 +12,14 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AlterModelOptions(
             name='message',
-            options={'ordering': ['-created'], 'verbose_name': 'Message', 'verbose_name_plural': 'Messages'},
+            options={'ordering': [
+                '-created'], 'verbose_name': 'Message', 'verbose_name_plural': 'Messages'},
         ),
         migrations.AlterField(
             model_name='message',
             name='created',
-            field=models.DateTimeField(auto_now_add=True, verbose_name='Created'),
+            field=models.DateTimeField(
+                auto_now_add=True, verbose_name='Created'),
         ),
         migrations.AlterField(
             model_name='message',

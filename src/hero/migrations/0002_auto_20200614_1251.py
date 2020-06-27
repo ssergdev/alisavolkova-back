@@ -12,15 +12,18 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AlterModelOptions(
             name='slide',
-            options={'ordering': ['ordering'], 'verbose_name': 'Slide', 'verbose_name_plural': 'Slides'},
+            options={'ordering': [
+                'ordering'], 'verbose_name': 'Slide', 'verbose_name_plural': 'Slides'},
         ),
         migrations.AlterModelOptions(
             name='slidetranslation',
-            options={'default_permissions': (), 'managed': True, 'verbose_name': 'Slide Translation'},
+            options={'default_permissions': (), 'managed': True,
+                     'verbose_name': 'Slide Translation'},
         ),
         migrations.AlterField(
             model_name='slide',
             name='image',
-            field=models.ImageField(blank=True, upload_to='blocks', verbose_name='Image'),
+            field=models.ImageField(
+                blank=True, upload_to='blocks', verbose_name='Image'),
         ),
     ]
