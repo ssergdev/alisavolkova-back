@@ -7,7 +7,7 @@ python manage.py migrate
 python manage.py collectstatic --noinput 
 
 : ${MODE:='prod'}
-if [ $MODE == 'prod' ]
+if [ $MODE = 'prod' ]
 then
     exec gunicorn app.wsgi \
         --bind 0.0.0.0:8000 \

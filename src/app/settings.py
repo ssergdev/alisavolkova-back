@@ -142,9 +142,8 @@ THUMBNAIL_HIGH_RESOLUTION = False
 THUMBNAIL_SUBDIR = 'thumbs'
 THUMBNAIL_QUALITY = 85
 THUMBNAIL_OPTIMIZE_COMMAND = {
-    'gif': '/usr/bin/optipng {filename}',
-    'jpeg': '/usr/bin/jpegoptim {filename}',
-    'png': '/usr/bin/optipng {filename}'
+    'jpeg': '/usr/bin/jpegoptim -q {filename}',
+    'png': '/usr/bin/optipng -quiet {filename}'
 }
 
 # UPLOAD
